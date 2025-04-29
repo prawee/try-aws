@@ -1,0 +1,19 @@
+{
+  "name": "try-aws",
+  "description": "Simple test AWS CDK project to deploy a Docker container to AWS Lambda using TypeScript.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outdir=dist/index.js"
+  },
+  "keywords": ["cdk", "aws", "typescript", "container", "docker", "lambda"],
+  "author": {
+    "name": "Prawee Wongsa",
+    "email": "prawee@hotmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.149",
+    "esbuild": "^0.25.3"
+  }
+}
