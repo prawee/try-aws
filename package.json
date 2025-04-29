@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outdir=dist/index.js"
+    "build": "esbuild index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outdir=dist/index.js",
+    "build:image": "docker buildx build --platform linux/arm64,linux/amd64 --provenance=false --tag try-aws:latest . --load"
   },
   "keywords": ["cdk", "aws", "typescript", "container", "docker", "lambda"],
   "author": {

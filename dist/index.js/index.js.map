@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../index.ts"],
+  "sourcesContent": ["import { Context, APIGatewayProxyResult, APIGatewayEvent } from 'aws-lambda'\n\nexport const handler = async (event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResult> => {\n    console.log('Event:', JSON.stringify(event, null, 2))\n    console.log('Context:', JSON.stringify(context, null, 2))   \n    const response: APIGatewayProxyResult = {\n        statusCode: 200,\n        body: JSON.stringify({\n            message: 'Hello from Lambda!',\n            timestamp: new Date().toISOString(),\n        }),\n    }    \n    return response\n}"],
+  "mappings": "4ZAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAEO,IAAME,EAAU,MAAOE,EAAwBC,KAClD,QAAQ,IAAI,SAAU,KAAK,UAAUD,EAAO,KAAM,CAAC,CAAC,EACpD,QAAQ,IAAI,WAAY,KAAK,UAAUC,EAAS,KAAM,CAAC,CAAC,EAChB,CACpC,WAAY,IACZ,KAAM,KAAK,UAAU,CACjB,QAAS,qBACT,UAAW,IAAI,KAAK,EAAE,YAAY,CACtC,CAAC,CACL",
+  "names": ["index_exports", "__export", "handler", "__toCommonJS", "event", "context"]
+}
